@@ -1,3 +1,7 @@
+h1,h2,p {
+	font-family: helvetica;
+}
+
 
 /* Main menu settings */
 #centeredmenu {
@@ -5,10 +9,10 @@
 	float:left;
 	margin:0;
 	padding:0;
-	border-bottom:1px solid #000; /* black line below menu */
+	border-bottom:2px solid #090e33; /* black line below menu */
 	width:100%;
 	font-family:Verdana, Geneva, sans-serif; /* Menu font */
-	font-size:90%; /* Menu text size */
+	font-size:120%; /* Menu text size */
 	z-index:1000; /* This makes the dropdown menus appear above the page content below */
 	position:relative;
 }
@@ -36,9 +40,9 @@
 	padding:.6em .5em .4em;
 	font-size:1em;
 	line-height:1em;
-	background:#ddd;
+	background:#090e33; /* Top menu items background colour */
 	text-decoration:none;
-	color:#444;
+	color:white;
 	font-weight:bold;
 	border-bottom:1px solid #000;
 }
@@ -48,7 +52,7 @@
 }
 #centeredmenu ul li a:hover {
 	background:#36f; /* Top menu items background colour */
-	color:#fff;
+	color:fff;
 	border-bottom:1px solid #03f;
 }
 #centeredmenu ul li:hover a,
