@@ -7,13 +7,20 @@
     <link rel="icon" type="image/png"
         href="http://i.imgur.com/MNPXzMB.png">
         <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/three.min.js"></script>
+
+        <style>
+    			canvas { width: 200px; height: 200px ; position:absolute ; right:0 ; top:0 ;}
+    		</style>
 
   </head>
   <body>
+    <canvas id="mycube"></canvas>
+
 <h1>wlwl2's Github Page</h1>
 
 <div id="centeredmenu">
-   <ul>
+   <ul id="colorlist">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="#" id="aboutme">About Me</a></li>
       <li><a href="#">Repositories &#9660;</a>
@@ -21,8 +28,8 @@
         				<li><a href="#">Cash Register</a></li>
         				<li><a href="https://github.com/wlwl2/chat.git">Chat</a></li>
         				<li><a href="#">Phaser</a></li>
-        				<li><a href="#">Wesnoth</a></li>
-                <li><a href="">Diagrams</a></li>
+        				<li><a href="https://github.com/wlwl2/Wesnoth">Wesnoth</a></li>
+                <li><a href="#">Diagrams</a></li>
   			</ul>
       </li>
       <li><a href="#">Projects &#9660;</a>
@@ -45,7 +52,7 @@ You can view my repository <a target="_blank" href="https://github.com/wlwl2">in
 
 
 <script>
-
+//jquery.js
 $( "#home" ).click(function() {
       $( "h2" ).html('Home');
       $( "p" ).html('Hover your mouse over the repository menu above to see a list of my work! <br> You can view my repository <a href="https://github.com/wlwl2">here</a> (https://github.com/wlwl2)');
@@ -55,6 +62,64 @@ $( "#aboutme" ).click(function() {
       $( "h2" ).html('About me');
       $( "p" ).html('Hi, my name is William. I am a chemist and software developer.');
 });
+
+//3.js
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera( 40, (window.innerWidth * 0.17) / (window.innerHeight * 0.17), 0.1, 1000 );
+
+var renderer = new THREE.WebGLRenderer({alpha:true});
+renderer.setSize( window.innerWidth * .17, window.innerHeight *.17);
+document.body.appendChild( renderer.domElement );
+
+var ambientLight = new THREE.AmbientLight( 0x000000 );
+    scene.add( ambientLight );
+
+    var lights = [];
+    lights[0] = new THREE.PointLight( 0xffffff, 1, 0, 0 );
+
+    lights[0].position.set( 0, 0, 100 );
+
+    scene.add( lights[0] );
+
+var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var material = new THREE.MeshLambertMaterial( { color: 0x090e33 } );
+var cube = new THREE.Mesh( geometry, material );
+
+var onKeyDown = function(event) {
+  if (event.keyCode == 67) { // when 'c' is pressed
+    cube.material.color.setHex(0xfc00b6); // there is also setHSV and setRGB
+  }
+  else if (event.keyCode == 68) { // when 'd' is pressed
+    cube.material.color.setHex(0x24ff33); // there is also setHSV and setRGB
+  }
+  else if (event.keyCode == 69) { // when 'd' is pressed
+    cube.material.color.setHex(0x090e33); // there is also setHSV and setRGB
+  }
+};
+document.addEventListener('keydown', onKeyDown, false);
+
+// this handler will be executed every time the cursor is moved over a different list item
+  colorlist.addEventListener("mouseover", function( event ) {
+    // highlight the mouseover target
+    cube.material.color.setHex(0x0955ff); // there is also setHSV and setRGB
+  }, false);
+
+  colorlist.addEventListener("mouseout", function( event ) {
+    // highlight the mouseover target
+    cube.material.color.setHex(0x090e33); // there is also setHSV and setRGB
+  }, false);
+
+scene.add( cube );
+
+camera.position.z = 5;
+
+function render() {
+requestAnimationFrame( render );
+cube.rotation.x += 0.01;
+cube.rotation.y += 0.01;
+renderer.render( scene, camera );
+}
+render();
 
 </script>
 
