@@ -117,3 +117,8 @@ h1,h2,p {
 #centeredmenu ul li.hover ul { /* This line is required for IE 6 and below */
 	display:block; /* Show the sub menus */
 }
+
+/*canvas*/
+#mycube {
+	z-index: 1001;
+}
