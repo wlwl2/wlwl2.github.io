@@ -125,5 +125,5 @@ h1,h2,p {
 		position:absolute;
 		right:0;
 		top:0;
-		z-index:1001; /*not sure if this works or not*/
+		z-index:1100; /*not sure if this works or not*/
 }
