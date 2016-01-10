@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>wlwl2's Github Page</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" href="http://i.imgur.com/MNPXzMB.png">
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="js/three.min.js"></script>
   </head>
   <body>
@@ -15,7 +14,7 @@
 
     <div id="centeredmenu">
        <ul id="colorlist">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" id="home">Home</a></li>
           <li><a href="#" id="aboutme">About Me</a></li>
           <li><a href="#">Repositories &#9660;</a>
             <ul>
@@ -40,22 +39,23 @@
        </ul>
     </div>
 
-    <h2>Home</h2>
-    <p>Hover your mouse over the menus above to see my work! <br><br>
-    You can view my repository <a target="_blank" href="https://github.com/wlwl2">in a new window/tab</a> or <a href="https://github.com/wlwl2">in the same window/tab</a><br><br>(https://github.com/wlwl2)</p>
+    <h2 id="header2">Home</h2>
+    <p id="paragraph" >Hover your mouse over the menus above to see my work! <br><br>
+    You can view my repository <a target="_blank" href="https://github.com/wlwl2">in a new window/tab</a> or <a href="https://github.com/wlwl2">in the same window/tab</a>.<br><br>(https://github.com/wlwl2)</p>
 
 
 <script>
 //jquery.js
-$( "#home" ).click(function() {
-      $( "h2" ).html('Home');
-      $( "p" ).html('Hover your mouse over the repository menu above to see a list of my work! <br> You can view my repository <a href="https://github.com/wlwl2">here</a> (https://github.com/wlwl2)');
-});
 
-$( "#aboutme" ).click(function() {
-      $( "h2" ).html('About me');
-      $( "p" ).html('Hi, my name is William. I am a chemist and software developer.');
-});
+document.getElementById( "home" ).onclick = function() {
+      document.getElementById( "header2" ).innerHTML = 'Home';
+      document.getElementById( "paragraph" ).innerHTML = 'Hover your mouse over the repository menu above to see a list of my work! <br> You can view my repository <a href="https://github.com/wlwl2">here</a> (https://github.com/wlwl2)';
+};
+
+document.getElementById( "aboutme" ).onclick = function() {
+      document.getElementById( "header2" ).innerHTML = 'About me';
+      document.getElementById( "paragraph" ).innerHTML = 'Hi, my name is William. I am a chemist and software developer.';
+};
 
 //3.js
 var scene = new THREE.Scene();
