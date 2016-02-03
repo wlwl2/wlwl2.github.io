@@ -2,16 +2,6 @@ h1,h2,p {
 	font-family: helvetica;
 }
 
-.openMenu {
-  background-color: yellow;
-  height: 50px;
-  width: 100%;
-}
-
-.openMenuButton {
-  height: 50px;
-  width: 100%;
-}
 
 /* Main menu settings */
 #centeredmenu {
