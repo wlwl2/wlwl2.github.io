@@ -2,115 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>wlwl2's Github Page</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <script src="js/three.min.js"></script>
   </head>
   <body>
-    <canvas id="mycube"></canvas>
 
-    <h1>wlwl2's Github Page</h1>
-
-    <div id="centeredmenu">
-       <ul id="colorlist">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#" id="aboutme">About Me</a></li>
-          <li><a href="#">Repositories &#9660;</a>
-            <ul>
-            				<li><a href="#">Cash Register</a></li>
-            				<li><a href="https://github.com/wlwl2/chat.git">Chat</a></li>
-            				<li><a href="#">Phaser</a></li>
-            				<li><a href="https://github.com/wlwl2/Wesnoth">Wesnoth</a></li>
-                    <li><a href="#">Diagrams</a></li>
-      			</ul>
-          </li>
-          <li><a href="#">Projects &#9660;</a>
-            <ul>
-            				<li><a href="#">Rescent</a></li>
-            				<li><a href="#">IDT/WDT</a></li>
-                    <li><a href="#">Doc</a></li>
-                    <li><a href="#">User accounts/Login/out</a></li>
-                    <li><a href="#">Localstorage/Memcache/Redis</a></li>
-                    <li><a href="#">Atom Browser Preview</a></li>
-                    <li><a href="http://todolist.bitballoon.com">todolist</a></li>
-      			</ul>
-          </li>
-       </ul>
+    <div class="title">
+      <h1>wlwl2's Github Page</h1>
     </div>
 
-    <h2 id="header2">Home</h2>
-    <p id="paragraph" >Hover your mouse over the menus above to see my work! <br><br>
-    You can view my repository <a target="_blank" href="https://github.com/wlwl2">in a new window/tab</a> or <a href="https://github.com/wlwl2">in the same window/tab</a>.<br><br>(https://github.com/wlwl2)</p>
+    <nav class="menu">
+      <ul>
+        <li><button href="index.html" class="active">Home</button></li>
+        <li><button href="#">Repositories &#9660;</button>
+          <ul>
+        				<li><a href="#">Cash Register</a></li>
+        				<li><a href="https://github.com/wlwl2/chat.git">Chat</a></li>
+        				<li><a href="#">Phaser</a></li>
+        				<li><a href="https://github.com/wlwl2/Wesnoth">Wesnoth</a></li>
+            <li><a href="#">Diagrams</a></li>
+     			  </ul>
+        </li>
+        <li><button href="#">Projects &#9660;</button>
+          <ul>
+        				<li><a href="#">Rescent</a></li>
+        				<li><a href="#">IDT/WDT</a></li>
+            <li><a href="#">Doc</a></li>
+            <li><a href="#">User accounts/Login/out</a></li>
+            <li><a href="#">Localstorage/Memcache/Redis</a></li>
+            <li><a href="#">Atom Browser Preview</a></li>
+            <li><a href="http://todolist.bitballoon.com">todolist</a></li>
+      			 </ul>
+        </li>
+      </ul>
+    </nav>
 
+    <section class="content">
+      <h2>Home</h2>
+      <p id="paragraph" >
+        Hover your mouse over the menus above to see my work! <br>
+        <br>
+        You can view my repository <a target="_blank" href="https://github.com/wlwl2">in a new window/tab</a> or <a href="https://github.com/wlwl2">in the same window/tab</a>.<br>
+        <br>
+        (https://github.com/wlwl2)
+      </p>
+    </section>
 
-<script>
-//jquery.js
-
-document.getElementById( "aboutme" ).onclick = function() {
-      document.getElementById( "header2" ).innerHTML = 'About me';
-      document.getElementById( "paragraph" ).innerHTML = 'Hi, my name is William. I am a chemist and software developer.';
-};
-
-//3.js
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 40, 300/100, 0.1, 1000 );
-
-var renderer = new THREE.WebGLRenderer({alpha:true});
-renderer.setSize( 300, 100);
-document.body.appendChild( renderer.domElement );
-
-var ambientLight = new THREE.AmbientLight( 0x000000 );
-    scene.add( ambientLight );
-
-    var lights = [];
-    lights[0] = new THREE.PointLight( 0xffffff, 1, 0, 0 );
-
-    lights[0].position.set( 0, 0, 100 );
-
-    scene.add( lights[0] );
-
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var material = new THREE.MeshLambertMaterial( { color: 0x090e33 } );
-var cube = new THREE.Mesh( geometry, material );
-
-var onKeyDown = function(event) {
-  if (event.keyCode == 67) { // when 'c' is pressed
-    cube.material.color.setHex(0xfc00b6); // there is also setHSV and setRGB
-  }
-  else if (event.keyCode == 68) { // when 'd' is pressed
-    cube.material.color.setHex(0x24ff33); // there is also setHSV and setRGB
-  }
-  else if (event.keyCode == 69) { // when 'd' is pressed
-    cube.material.color.setHex(0x090e33); // there is also setHSV and setRGB
-  }
-};
-document.addEventListener('keydown', onKeyDown, false);
-
-// this handler will be executed every time the cursor is moved over a different list item
-  colorlist.addEventListener("mouseover", function( event ) {
-    // highlight the mouseover target
-    cube.material.color.setHex(0x0955ff); // there is also setHSV and setRGB
-  }, false);
-
-  colorlist.addEventListener("mouseout", function( event ) {
-    // highlight the mouseover target
-    cube.material.color.setHex(0x090e33); // there is also setHSV and setRGB
-  }, false);
-
-scene.add( cube );
-
-camera.position.z = 5;
-
-function render() {
-requestAnimationFrame( render );
-cube.rotation.x += 0.02;
-cube.rotation.y += 0.02;
-renderer.render( scene, camera );
-}
-render();
-
-</script>
-
+    <script src="js/three.min.js"></script>
+    <script src="js/cube.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
