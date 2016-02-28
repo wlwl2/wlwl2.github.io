@@ -28,8 +28,13 @@ canvas {
 	background-color: green;
 }
 
-.menu > ul > li > ul {
+.hide-sub-menu {
 	display: none;
+}
+
+.show-sub-menu {
+	display: block;
+	position: absolute;
 }
 
 .content {
