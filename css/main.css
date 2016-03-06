@@ -1,42 +1,78 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	background-color: #e4fef2;
+}
+
 .title {
-	display: inline-block;
-	width: 50%;
+		display: inline-block;
+		width: 50%;
+		font-family: sans-serif;
+}
+
+.title > h1 {
+		margin: 0;
+		padding: 21.4px 0;
 }
 
 canvas {
-	float: right;
-	margin: 15px 0;
+		float: right;
+		padding: 15px 0;
+}
+
+.menu-container {
+		background-color: #a2fad0;
+		padding: 5px 0;
 }
 
 .menu {
-	display:block;
-	margin:auto;
-	width: 70%;
+		display:block;
+		margin:auto;
+		width: 70%;
 }
 
 .menu > ul {
-	text-align: center;
+		text-align: center;
+		margin: 0;
 }
 
 .menu > ul > li {
-	display: inline-table;
+		display: inline-table;
 }
 
 .menu > ul > li > button{
-	padding: 10px;
-	margin: 10px;
-	background-color: green;
+		padding: 20px;
+		margin: 0 10px;
+		background-color: #4bdb73;
+}
+
+.menu > ul > li > ul {
+		padding: 0;
+		margin: 0 10px;
+}
+
+.menu > ul > li > ul > li {
+		list-style: none;
+		text-align: left;
 }
 
 .hide-sub-menu {
-	display: none;
+		display: none;
 }
 
 .show-sub-menu {
-	display: block;
-	position: absolute;
+		display: block;
+		position: absolute;
 }
 
 .content {
-	display:block;
+		display:block;
+}
+
+.content > h2 {
+		font-family: sans-serif;
+}
+
+.content > p {
+		font-family: sans-serif;
 }
