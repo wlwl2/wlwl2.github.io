@@ -16,14 +16,18 @@ showMenu = function (event) {
   }
 };
 
+stopClose = function (event) {
+  event.stopPropagation();
+};
+
 var menuButtons = document.querySelectorAll(".menu > ul > li > button");
 for (var i=0; i<menuButtons.length; i++) {
   if (menuButtons[i].nextElementSibling) {
     menuButtons[i].addEventListener("click", showMenu);
+    menuButtons[i].nextElementSibling.addEventListener("click", stopClose);
   }
 }
 
-//Problem with setting too many classes
 document.addEventListener('click', function() {
   for (var i=0, menuList = document.querySelectorAll(".menu > ul > li"); i<menuList.length; i++) {
     if (menuList[i].firstChild.nextElementSibling) {
