@@ -49,6 +49,8 @@ canvas {
 .menu > ul > li > ul {
 		padding: 0;
 		margin: 0 10px;
+		background-color: green;
+		width: 200px;
 }
 
 .menu > ul > li > ul > li {
@@ -56,11 +58,11 @@ canvas {
 		text-align: left;
 }
 
-.hide-sub-menu {
+.sub-menu.hide-sub-menu {
 		display: none;
 }
 
-.show-sub-menu {
+.sub-menu.show-sub-menu {
 		display: block;
 		position: absolute;
 }
