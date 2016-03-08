@@ -5,76 +5,98 @@ html, body {
 }
 
 .title {
-		display: inline-block;
-		width: 50%;
-		font-family: sans-serif;
+	display: inline-block;
+	width: 50%;
+	font-family: sans-serif;
+	margin: 0 0 0 40px;
 }
 
 .title > h1 {
-		margin: 0;
-		padding: 21.4px 0;
+	margin: 0;
+	padding: 21.4px 0;
 }
 
 canvas {
-		float: right;
-		padding: 15px 0;
+	float: right;
+	padding: 15px 0;
+	margin: 0 40px 0 0;
 }
 
 .menu-container {
-		background-color: #a2fad0;
-		padding: 5px 0;
+	background-color: #a2fad0;
+	padding: 5px 0;
 }
 
 .menu {
-		display:block;
-		margin:auto;
-		width: 70%;
+	display:block;
+	margin:auto;
+	width: 70%;
 }
 
 .menu > ul {
-		text-align: center;
-		margin: 0;
+	text-align: center;
+	margin: 0;
 }
 
 .menu > ul > li {
-		display: inline-table;
+	display: inline-table;
 }
 
 .menu > ul > li > button{
-		padding: 20px;
-		margin: 0 10px;
-		background-color: #4bdb73;
+	padding: 10px;
+	margin: 0 10px;
+	background-color: #4bdb73;
+	font-size: 1em;
+	font-family: sans-serif;
 }
 
 .menu > ul > li > ul {
-		padding: 0;
-		margin: 0 10px;
-		background-color: green;
-		width: 200px;
+	padding: 0;
+	margin: 0 10px;
+	background-color: #4bdb73;
+	width: 200px;
 }
 
 .menu > ul > li > ul > li {
-		list-style: none;
-		text-align: left;
+	list-style: none;
+	text-align: left;
+}
+
+.menu > ul > li > ul > li > a {
+	display: inline-block;
+	width: 100%;
+	padding: 15px;
+	font-size: 1em;
+	font-family: sans-serif;
+
 }
 
 .sub-menu.hide-sub-menu {
-		display: none;
+	display: none;
 }
 
 .sub-menu.show-sub-menu {
-		display: block;
-		position: absolute;
+	display: block;
+	position: absolute;
 }
 
 .content {
-		display:block;
+	display:block;
+	margin: 0 40px;
 }
 
 .content > h2 {
-		font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 .content > p {
-		font-family: sans-serif;
+	font-family: sans-serif;
+}
+
+@media screen and (max-width: 720px) {
+	.menu > ul > li {
+		display: block;
+	}
+
+	
 }
