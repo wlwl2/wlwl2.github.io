@@ -23,7 +23,7 @@ canvas {
 }
 
 .menu-container {
-	background-color: #a2fad0;
+	background-color: #233C4A;
 	padding: 5px 0;
 }
 
@@ -45,9 +45,12 @@ canvas {
 .menu > ul > li > button{
 	padding: 10px;
 	margin: 0 10px;
-	background-color: #4bdb73;
+	background-color: #7ABA37;
 	font-size: 1em;
 	font-family: sans-serif;
+	border-radius: 5px;
+	border-color: inherit;
+	font-weight: bold;
 }
 
 .menu > ul > li > ul {
@@ -98,5 +101,5 @@ canvas {
 		display: block;
 	}
 
-	
+
 }
