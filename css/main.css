@@ -23,7 +23,7 @@ canvas {
 }
 
 .menu-container {
-	background-color: #233C4A;
+	background-color: #59b551;
 	padding: 5px 0;
 }
 
@@ -45,19 +45,20 @@ canvas {
 .menu > ul > li > button{
 	padding: 10px;
 	margin: 0 10px;
-	background-color: #7ABA37;
+	background-color: #16461e;
 	font-size: 1em;
 	font-family: sans-serif;
 	border-radius: 5px;
 	border-color: inherit;
 	font-weight: bold;
+	color: #fff;
 }
 
 .menu > ul > li > ul {
 	padding: 0;
 	margin: 0 10px;
-	background-color: #4bdb73;
-	width: 200px;
+	background-color: #59b551;
+	width: 15em;
 }
 
 .menu > ul > li > ul > li {
@@ -81,6 +82,23 @@ canvas {
 .sub-menu.show-sub-menu {
 	display: block;
 	position: absolute;
+}
+
+/*red color same as red cube*/
+.sub-menu.show-sub-menu li {
+	background-color: #e32121;
+}
+
+.sub-menu.show-sub-menu li a {
+	color: #fff;
+}
+
+.sub-menu.show-sub-menu li a:hover {
+	background-color: #b01f1f;
+}
+
+.sub-menu-button.show-sub-menu {
+	background-color: #e32121;
 }
 
 .content {
