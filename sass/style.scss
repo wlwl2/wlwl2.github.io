@@ -1,7 +1,10 @@
+$whole-page-background: #e4fef2;
+
+
 html, body {
 	margin: 0;
 	height: 100%;
-	background-color: #e4fef2;
+	background-color: $whole-page-background;
 }
 
 .title {
@@ -9,11 +12,12 @@ html, body {
 	width: 50%;
 	font-family: sans-serif;
 	margin: 0 0 0 40px;
-}
 
-.title > h1 {
-	margin: 0;
-	padding: 21.4px 0;
+	> h1 {
+		margin: 0;
+		padding: 21.4px 0;
+	}
+
 }
 
 canvas {
@@ -25,55 +29,58 @@ canvas {
 .menu-container {
 	background-color: #59b551;
 	padding: 5px 0;
+
+	.menu {
+		display:block;
+		margin:auto;
+		width: 70%;
+
+		> ul {
+			text-align: center;
+			margin: 0;
+		}
+
+		> ul > li {
+			display: inline-table;
+		}
+
+		> ul > li > button{
+			padding: 10px;
+			margin: 0 10px;
+			background-color: #16461e;
+			font-size: 1em;
+			font-family: sans-serif;
+			border-radius: 5px;
+			border-color: inherit;
+			font-weight: bold;
+			color: #fff;
+		}
+
+		> ul > li > ul {
+			padding: 0;
+			margin: 0 10px;
+			background-color: #59b551;
+			width: 15em;
+		}
+
+		.menu > ul > li > ul > li {
+			list-style: none;
+			text-align: left;
+		}
+
+		.menu > ul > li > ul > li > a {
+			display: inline-block;
+			width: 100%;
+			padding: 15px;
+			font-size: 1em;
+			font-family: sans-serif;
+
+		}
+
+	}
+
 }
 
-.menu {
-	display:block;
-	margin:auto;
-	width: 70%;
-}
-
-.menu > ul {
-	text-align: center;
-	margin: 0;
-}
-
-.menu > ul > li {
-	display: inline-table;
-}
-
-.menu > ul > li > button{
-	padding: 10px;
-	margin: 0 10px;
-	background-color: #16461e;
-	font-size: 1em;
-	font-family: sans-serif;
-	border-radius: 5px;
-	border-color: inherit;
-	font-weight: bold;
-	color: #fff;
-}
-
-.menu > ul > li > ul {
-	padding: 0;
-	margin: 0 10px;
-	background-color: #59b551;
-	width: 15em;
-}
-
-.menu > ul > li > ul > li {
-	list-style: none;
-	text-align: left;
-}
-
-.menu > ul > li > ul > li > a {
-	display: inline-block;
-	width: 100%;
-	padding: 15px;
-	font-size: 1em;
-	font-family: sans-serif;
-
-}
 
 .sub-menu.hide-sub-menu {
 	display: none;
