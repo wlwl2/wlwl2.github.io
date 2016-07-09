@@ -74,7 +74,9 @@ html, body {
   font-family: sans-serif; }
   .content > p button {
     padding: 1em;
-    border-radius: .6em; }
+    border-radius: .6em;
+    background-color: #FFD700;
+    border-color: #FFD700; }
     .content > p button a {
       text-decoration: none;
       font-size: 1.6em; }
