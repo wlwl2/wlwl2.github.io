@@ -23,29 +23,28 @@ html, body {
         padding: .5em;
         margin: 0 .5em;
         font-family: sans-serif;
-        border: solid 0.3em #fff;
+        border: solid 0.1em #fff;
         border-top-color: #FFD700;
         color: #000;
         text-decoration: none; }
       .menu-container .menu > ul > li > a:hover {
         background-color: #FFD700;
-        border: solid 0.3em #FFD700; }
+        border: solid 0.1em #FFD700; }
     .menu-container .menu > ul > li > ul {
       padding: 0;
-      margin: 0 .5em;
+      margin: 0.1em .5em 0;
       list-style-type: none; }
     .menu-container .menu > ul > li > ul > li {
       list-style: none;
       text-align: left;
       background-color: #fff;
-      padding: 0 1.518em 0 0; }
+      padding: .5em 1.179em 0 0; }
       .menu-container .menu > ul > li > ul > li a {
         display: inline-block;
         width: 100%;
-        padding: .8em .5em;
-        margin: .3em 0;
+        padding: .5em;
         text-decoration: none;
-        border: solid 0.3em #fff;
+        border: solid 0.1em #fff;
         border-left-color: #FFD700; }
       .menu-container .menu > ul > li > ul > li a:link,
       .menu-container .menu > ul > li > ul > li a:visited,
@@ -54,7 +53,7 @@ html, body {
         color: #000; }
       .menu-container .menu > ul > li > ul > li a:hover {
         background-color: #FFD700;
-        border: solid 0.3em #FFD700; }
+        border: solid 0.1em #FFD700; }
 
 .sub-menu.hidden {
   display: none; }
