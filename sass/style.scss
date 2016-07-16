@@ -45,78 +45,33 @@ html, body {
 			> a:hover {
 				background-color: $gold;
 				border: solid 0.1em $gold;
+				border-radius: 0.2em;
 
 			}
-		}
-
-		//sub menu buttons
-
-		// .submenu
-		> ul > li > ul {
-			padding: 0;
-			margin: 0.1em .5em 0;
-			list-style-type: none;
-		}
-
-		> ul > li > ul > li {
-			list-style: none;
-			text-align: left;
-			background-color: $white;
-			padding: .5em 1.179em 0 0;
-
-			a {
-				display: inline-block;
-				width: 100%;
-				padding: .5em;
-				text-decoration: none;
-				border: solid 0.1em $white;
-				border-left-color: $gold;
-			}
-
-			a:link,
-			a:visited,
-			a:active,
-			a:focus  {
-				color: $black;
-			}
-
-			a:hover{
-				background-color: $gold;
-				border: solid 0.1em $gold;
-
-			}
-
 		}
 	}
 }
 
-.sub-menu.hidden {
+.hidden {
 	display: none;
 }
 
-.sub-menu.shown {
+.shown {
 	display: block;
-	position: absolute;
 }
 
-.content {
+.home {
 	display:block;
 	margin: 0 3em;
 	font-size: 1.4em;
 
-	> h2 {
-		font-family: sans-serif;
-	}
-
-}
-
-
-.content > p {
+ 	> p {
 	font-family: sans-serif;
+	}
 
 	button {
 		padding: 1em;
-		border-radius: .6em;
+		border-radius: .5em;
 		background-color: $gold;
 		border-color: $gold;
 
