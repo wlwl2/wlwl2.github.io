@@ -1,4 +1,33 @@
-// Just copied and pasted lines 5 to 11 need to optimize.
+// adds the list of my repos to the menu async
+(function myRepositoriesMenu() {
+  var httpRequest;
+  makeRequest('https://api.github.com/users/wlwl2/repos');
+
+  function makeRequest(url) {
+    httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = alertContents;
+    httpRequest.open('GET', url);
+    httpRequest.send();
+  }
+
+  function alertContents() {
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        var repoList = document.querySelector(".menu > ul").children[1].children[1];
+        var myRepositoriesObject = JSON.parse(httpRequest.responseText);
+        for (var i = 0, repoListItems = "";i<myRepositoriesObject.length;i++) {
+          var repoListItems = repoListItems +
+          '<li><a href="' + myRepositoriesObject[i].html_url + '">' +
+            myRepositoriesObject[i].name +
+          '</a></li>'
+        }
+        repoList.innerHTML = repoListItems;
+      }
+    }
+  }
+})();
+
+// need to optimize.
 // Click to show sub menus.
 showMenu = function (event) {
   event.stopPropagation();
