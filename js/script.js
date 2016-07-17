@@ -27,38 +27,15 @@
   }
 })();
 
-// Shows sections on button click on top menu
-for (var i = 0, sections = document.querySelector(".sections").children; i < menuButtons.length; i++) {
-  var sections = document.querySelector(".sections").children
+// need to optimize.
+// Click to show sub menus.
+showSection = function (event) {
 
-  menuButtons[i].addEventListener("click", function showSection() {
-    var sections = document.querySelector(".sections").children
+};
 
-      sections[i].className = sections[i].className + ' shown';
-    }
-  });
+var menuButtons = document.querySelectorAll(".menu > ul > li > a");
+for (var i=0; i<menuButtons.length; i++) {
+  if (menuButtons[i].nextElementSibling) {
+    menuButtons[i].addEventListener("click", showMenu);
+  }
 }
-
-
-/*var homeSection = document.querySelector('.sections').children[0];
-var repoSection = document.querySelector('.sections').children[1];
-var projSection = document.querySelector('.sections').children[2];
-
-homeSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-
-repoSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-
-projSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-*/
