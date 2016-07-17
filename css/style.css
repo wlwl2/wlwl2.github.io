@@ -29,34 +29,61 @@ html, body {
         text-decoration: none; }
       .menu-container .menu > ul > li > a:hover {
         background-color: #FFD700;
-        border: solid 0.1em #FFD700;
-        border-radius: 0.2em; }
+        border: solid 0.1em #FFD700; }
+    .menu-container .menu > ul > li > ul {
+      padding: 0;
+      margin: 0.1em .5em 0;
+      list-style-type: none; }
+    .menu-container .menu > ul > li > ul > li {
+      list-style: none;
+      text-align: left;
+      background-color: #fff;
+      padding: .5em 1.179em 0 0; }
+      .menu-container .menu > ul > li > ul > li a {
+        display: inline-block;
+        width: 100%;
+        padding: .5em;
+        text-decoration: none;
+        border: solid 0.1em #fff;
+        border-left-color: #FFD700; }
+      .menu-container .menu > ul > li > ul > li a:link,
+      .menu-container .menu > ul > li > ul > li a:visited,
+      .menu-container .menu > ul > li > ul > li a:active,
+      .menu-container .menu > ul > li > ul > li a:focus {
+        color: #000; }
+      .menu-container .menu > ul > li > ul > li a:hover {
+        background-color: #FFD700;
+        border: solid 0.1em #FFD700; }
 
-.hidden {
+.sub-menu.hidden {
   display: none; }
 
-.shown {
-  display: block; }
+.sub-menu.shown {
+  display: block;
+  position: absolute; }
 
-.home {
+.content {
   display: block;
   margin: 0 3em;
   font-size: 1.4em; }
-  .home > p {
+  .content > h2 {
     font-family: sans-serif; }
-  .home button {
+
+.content > p {
+  font-family: sans-serif; }
+  .content > p button {
     padding: 1em;
-    border-radius: .5em;
+    border-radius: .6em;
     background-color: #FFD700;
     border-color: #FFD700; }
-    .home button a {
+    .content > p button a {
       text-decoration: none;
       font-size: 1.6em; }
-    .home button a:link,
-    .home button a:visited,
-    .home button a:hover,
-    .home button a:active,
-    .home button a:focus {
+    .content > p button a:link,
+    .content > p button a:visited,
+    .content > p button a:hover,
+    .content > p button a:active,
+    .content > p button a:focus {
       color: #000; }
 
 @media screen and (max-width: 720px) {
