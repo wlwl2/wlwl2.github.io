@@ -28,37 +28,30 @@
 })();
 
 // Shows sections on button click on top menu
-for (var i = 0, sections = document.querySelector(".sections").children; i < menuButtons.length; i++) {
-  var sections = document.querySelector(".sections").children
-
+/*for (var i = 0, menuButtons = document.querySelectorAll(".menu > ul > li"); i < menuButtons.length; i++) {
   menuButtons[i].addEventListener("click", function showSection() {
-    var sections = document.querySelector(".sections").children
+    var menuButtons = document.querySelectorAll(".menu > ul > li");
 
-      sections[i].className = sections[i].className + ' shown';
-    }
+
   });
+}*/
+
+/*var g = document.querySelectorAll(".menu > ul > li");
+for (var i = 0, len = g.length; i < len; i++)
+{
+
+   (function(index){
+       g[i].onclick = function(){
+             alert(index)  ;
+       }
+   })(i);
+
+}*/
+
+for( var i = 0; i < items.length; i++ ){
+    (function(i){
+        items[i].addEventListener('click', function(event) {
+            alert( i );
+        }, false);
+    })(i);
 }
-
-
-/*var homeSection = document.querySelector('.sections').children[0];
-var repoSection = document.querySelector('.sections').children[1];
-var projSection = document.querySelector('.sections').children[2];
-
-homeSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-
-repoSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-
-projSection.addeventlistener('click', function () {
-  repoSection.className = 'respositories hidden';
-  projSection.className = 'projects hidden';
-  homeSection.className = 'home shown'
-},false);
-*/
