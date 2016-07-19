@@ -48,7 +48,7 @@ for (var i = 0, len = g.length; i < len; i++)
 
 }*/
 
-for( var i = 0; i < items.length; i++ ){
+for( var i = 0, items = document.querySelectorAll(".menu > ul > li"); i < items.length; i++ ){
     (function(i){
         items[i].addEventListener('click', function(event) {
             alert( i );
