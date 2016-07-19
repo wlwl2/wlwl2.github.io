@@ -35,9 +35,6 @@ html, body {
 .hidden {
   display: none; }
 
-.shown {
-  display: block; }
-
 .home {
   margin: 0 3em;
   font-size: 1.4em; }

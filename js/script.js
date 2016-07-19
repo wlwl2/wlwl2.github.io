@@ -28,30 +28,20 @@
 })();
 
 // Shows sections on button click on top menu
-/*for (var i = 0, menuButtons = document.querySelectorAll(".menu > ul > li"); i < menuButtons.length; i++) {
-  menuButtons[i].addEventListener("click", function showSection() {
-    var menuButtons = document.querySelectorAll(".menu > ul > li");
-
-
-  });
-}*/
-
-/*var g = document.querySelectorAll(".menu > ul > li");
-for (var i = 0, len = g.length; i < len; i++)
-{
-
-   (function(index){
-       g[i].onclick = function(){
-             alert(index)  ;
-       }
-   })(i);
-
-}*/
-
-for( var i = 0, items = document.querySelectorAll(".menu > ul > li"); i < items.length; i++ ){
-    (function(i){
-        items[i].addEventListener('click', function(event) {
-            alert( i );
-        }, false);
-    })(i);
+for( var i = 0, items = document.querySelectorAll(".menu ul li"); i < items.length; i++ ){
+  (function(i){
+    items[i].addEventListener('click', function(event) {
+      var sections = document.querySelectorAll(".sections section");
+      for( var j = 0; j < sections.length; j++ ){
+        if (sections[j].className.search(/hidden/) !== -1) {
+          sections[j].className = sections[j].className.replace(' hidden','');
+        }
+      }
+      var selectedSection = sections[i].className;
+      for( var k = 0, sections; k < sections.length; k++ ){
+        sections[k].className += ' hidden'
+      }
+      sections[i].className = selectedSection;
+    }, false);
+  })(i);
 }
