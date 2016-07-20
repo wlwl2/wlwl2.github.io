@@ -118,17 +118,10 @@ html, body {
 
 .repository-list li {
 	list-style-type: none;
-  animation-name: slidein;
 	width: 12em;
 	margin: 0.3em;
 	display: inline-block;
 	word-break: break-all;
-
-		@for $i from 1 to 100 {
-      &:nth-child(#{$i}) {
-      	animation-duration: 0.1s * $i;
-      }
-  	}
 
 		a {
 			text-decoration: none;
@@ -174,6 +167,13 @@ html, body {
 	margin: 0.3em;
 	display: inline-block;
 	word-break: break-all;
+	animation-name: slidein;
+
+	@for $i from 1 to 100 {
+		&:nth-child(#{$i}) {
+			animation-duration: 0.1s * $i;
+		}
+	}
 
 	a {
 		text-decoration: none;
