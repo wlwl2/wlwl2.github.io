@@ -28,7 +28,8 @@
 })();
 
 // Shows sections on button click on top menu
-for( var i = 0, items = document.querySelectorAll(".menu ul li"); i < items.length; i++ ){
+(function topMenu () {
+  for( var i = 0, items = document.querySelectorAll(".menu ul li"); i < items.length; i++ ){
   (function(i){
     items[i].addEventListener('click', function(event) {
       var sections = document.querySelectorAll(".sections section");
@@ -45,3 +46,4 @@ for( var i = 0, items = document.querySelectorAll(".menu ul li"); i < items.leng
     }, false);
   })(i);
 }
+})();

@@ -46,7 +46,6 @@ html, body {
 				background-color: $gold;
 				border: solid 0.1em $gold;
 				border-radius: 0.2em;
-
 			}
 		}
 	}
@@ -56,8 +55,13 @@ html, body {
 	display: none;
 }
 
+
+.sections {
+		margin: 0;
+}
+
 .home {
-	margin: 0 3em;
+	padding: 0 3em;
 	font-size: 1.4em;
 
  	> p {
@@ -83,6 +87,117 @@ html, body {
 		a:focus  {
 			color: $black;
 		}
+	}
+}
+
+.repositories {
+	padding: 0 3em;
+	font-size: 1.4em;
+
+	ul {
+		padding: 0;
+	}
+
+	> p {
+	font-family: sans-serif;
+	}
+}
+
+.projects {
+	padding: 0 3em;
+	font-size: 1.4em;
+
+	> p {
+	font-family: sans-serif;
+	}
+}
+
+
+
+
+
+.repository-list li {
+	list-style-type: none;
+  animation-name: slidein;
+	width: 12em;
+	margin: 0.3em;
+	display: inline-block;
+	word-break: break-all;
+
+		@for $i from 1 to 100 {
+      &:nth-child(#{$i}) {
+      	animation-duration: 0.1s * $i;
+      }
+  	}
+
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 0.4em;
+			border: solid 0.1em $white;
+			border-right-color: $gold;
+			background-color: $white;
+			border-radius: 0.2em;
+		}
+
+		a:link,
+		a:visited,
+		a:hover,
+		a:active,
+		a:focus  {
+			color: $black;
+		}
+
+		> a:hover {
+			background-color: $gold;
+			border: solid 0.1em $gold;
+			border-radius: 0.2em;
+		}
+
+}
+
+@keyframes slidein {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+
+}
+
+
+.projects-list li {
+	list-style-type: none;
+	width: 12em;
+	margin: 0.3em;
+	display: inline-block;
+	word-break: break-all;
+
+	a {
+		text-decoration: none;
+		display: block;
+		padding: 0.4em;
+		border: solid 0.1em $white;
+		border-right-color: $gold;
+		background-color: $white;
+		border-radius: 0.2em;
+
+	}
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:active,
+	a:focus  {
+		color: $black;
+	}
+
+	> a:hover {
+		background-color: $gold;
+		border: solid 0.1em $gold;
+		border-radius: 0.2em;
 	}
 }
 
