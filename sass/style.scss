@@ -11,14 +11,36 @@ html, body {
 }
 
 .menu-container {
+	display: block;
 	background-color: $white;
 	padding: .5em 0;
 	font-size: 1.4em;
 
+	.home-button {
+		padding: .4em;
+		display: inline-block;
+		width: 25%;
+
+		button {
+			display: inline-block;
+
+			a{
+				display: inline-block;
+				height: auto;
+
+				img {
+					display: inline-block;
+					height: 2em;
+				}
+
+			}
+		}
+	}
+
 	.menu {
-		display:block;
+		display:inline-block;
 		margin:auto;
-		width: 70%;
+		width: 50%;
 
 		> ul {
 			text-align: center;
@@ -49,6 +71,11 @@ html, body {
 			}
 		}
 	}
+}
+
+.space {
+	display: inline-block;
+	width: auto;
 }
 
 .hidden {

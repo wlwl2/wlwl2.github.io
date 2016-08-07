@@ -5,13 +5,26 @@ html, body {
   font-family: sans-serif; }
 
 .menu-container {
+  display: block;
   background-color: #fff;
   padding: .5em 0;
   font-size: 1.4em; }
+  .menu-container .home-button {
+    padding: .4em;
+    display: inline-block;
+    width: 25%; }
+    .menu-container .home-button button {
+      display: inline-block; }
+      .menu-container .home-button button a {
+        display: inline-block;
+        height: auto; }
+        .menu-container .home-button button a img {
+          display: inline-block;
+          height: 2em; }
   .menu-container .menu {
-    display: block;
+    display: inline-block;
     margin: auto;
-    width: 70%; }
+    width: 50%; }
     .menu-container .menu > ul {
       text-align: center;
       margin: 0;
@@ -31,6 +44,10 @@ html, body {
         background-color: #FFD700;
         border: solid 0.1em #FFD700;
         border-radius: 0.2em; }
+
+.space {
+  display: inline-block;
+  width: auto; }
 
 .hidden {
   display: none; }
