@@ -46,9 +46,12 @@ html, body {
 		a:link,
 		a:visited,
 		a:hover,
-		a:active,
 		a:focus  {
 			color: $black;
+		}
+
+		a:active {
+			background-color: #ffffff;
 		}
 
 	}
