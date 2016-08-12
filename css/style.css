@@ -9,18 +9,32 @@ html, body {
   background-color: #fff;
   padding: .5em 0;
   font-size: 1.4em; }
+  .menu-container .home-button-name {
+    display: inline-block; }
   .menu-container .home-button {
-    padding: .4em;
+    padding: 0;
     display: inline-block;
     width: 25%; }
-    .menu-container .home-button button {
-      display: inline-block; }
-      .menu-container .home-button button a {
+    .menu-container .home-button a {
+      display: inline-block;
+      height: auto;
+      text-decoration: none;
+      border-style: solid;
+      border-width: thin;
+      padding: 0.3em;
+      border-radius: 0.3em;
+      background-color: #f5f5f5;
+      margin: 0 0.4em; }
+      .menu-container .home-button a img {
         display: inline-block;
-        height: auto; }
-        .menu-container .home-button button a img {
-          display: inline-block;
-          height: 2em; }
+        height: 1em;
+        vertical-align: top; }
+    .menu-container .home-button a:link,
+    .menu-container .home-button a:visited,
+    .menu-container .home-button a:hover,
+    .menu-container .home-button a:active,
+    .menu-container .home-button a:focus {
+      color: #000; }
   .menu-container .menu {
     display: inline-block;
     margin: auto;
@@ -85,18 +99,12 @@ html, body {
   .repositories > p {
     font-family: sans-serif; }
 
-.projects {
-  padding: 0 3em;
-  font-size: 1.4em; }
-  .projects > p {
-    font-family: sans-serif; }
-
 .repository-list li {
   list-style-type: none;
   width: 12em;
   margin: 0.3em;
   display: inline-block;
-  word-break: break-all; }
+  vertical-align: middle; }
   .repository-list li a {
     text-decoration: none;
     display: block;
@@ -121,13 +129,23 @@ html, body {
     transform: translateX(-100%); }
   100% {
     transform: translateX(0); } }
+.projects {
+  padding: 0 3em;
+  font-size: 1.4em; }
+  .projects > p {
+    font-family: sans-serif; }
+
+.projects-list {
+  display: inline-block;
+  padding: 0; }
+
 .projects-list li {
   list-style-type: none;
   width: 12em;
   margin: 0.3em;
   display: inline-block;
-  word-break: break-all;
-  animation-name: slidein; }
+  animation-name: slidein;
+  vertical-align: middle; }
   .projects-list li:nth-child(1) {
     animation-duration: 0.1s; }
   .projects-list li:nth-child(2) {
