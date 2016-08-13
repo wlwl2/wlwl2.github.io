@@ -31,11 +31,12 @@ html, body {
         vertical-align: top; }
     .menu-container .home-button a:link,
     .menu-container .home-button a:visited,
-    .menu-container .home-button a:hover,
     .menu-container .home-button a:focus {
       color: #000; }
+    .menu-container .home-button a:hover {
+      background-color: #fff; }
     .menu-container .home-button a:active {
-      background-color: #ffffff; }
+      background-color: #FFD700; }
   .menu-container .menu {
     display: inline-block;
     margin: auto;

@@ -45,13 +45,16 @@ html, body {
 
 		a:link,
 		a:visited,
-		a:hover,
-		a:focus  {
+		a:focus {
 			color: $black;
 		}
 
+		a:hover {
+			background-color: $white;
+		}
+
 		a:active {
-			background-color: #ffffff;
+			background-color: $gold;
 		}
 
 	}
