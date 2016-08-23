@@ -155,22 +155,27 @@ html, body {
 	}
 }
 
+.repository-list {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 .repository-list li {
 	list-style-type: none;
-	width: 12em;
 	margin: 0.3em;
-	display: inline-block;
-	vertical-align: middle;
+	display: flex;
+	flex: 1 0 30%;
 
 
 		a {
 			text-decoration: none;
-			display: block;
+			display: flex;
 			padding: 0.4em;
 			border: solid 0.1em $white;
 			border-right-color: $gold;
 			background-color: $white;
 			border-radius: 0.2em;
+			flex-basis: 100%;
 		}
 
 		a:link,
@@ -210,17 +215,17 @@ html, body {
 }
 
 .projects-list {
-	display: inline-block;
+	display: flex;
+	flex-flow: row wrap;
 	padding: 0;
 }
 
 .projects-list li {
 	list-style-type: none;
-	width: 12em;
 	margin: 0.3em;
-	display: inline-block;
+	display: flex;
 	animation-name: slidein;
-	vertical-align: middle;
+	flex: 1 0 30%;
 
 
 	@for $i from 1 to 100 {
@@ -231,12 +236,13 @@ html, body {
 
 	a {
 		text-decoration: none;
-		display: block;
+		display: flex;
 		padding: 0.4em;
 		border: solid 0.1em $white;
 		border-right-color: $gold;
 		background-color: $white;
 		border-radius: 0.2em;
+		flex-basis: 100%;
 
 	}
 
