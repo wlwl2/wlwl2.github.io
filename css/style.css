@@ -101,24 +101,20 @@ html, body {
   .repositories > p {
     font-family: sans-serif; }
 
-.repository-list {
-  display: flex;
-  flex-flow: row wrap; }
-
 .repository-list li {
   list-style-type: none;
+  width: 12em;
   margin: 0.3em;
-  display: flex;
-  flex: 1 0 30%; }
+  display: inline-block;
+  vertical-align: middle; }
   .repository-list li a {
     text-decoration: none;
-    display: flex;
+    display: block;
     padding: 0.4em;
     border: solid 0.1em #fff;
     border-right-color: #FFD700;
     background-color: #fff;
-    border-radius: 0.2em;
-    flex-basis: 100%; }
+    border-radius: 0.2em; }
   .repository-list li a:link,
   .repository-list li a:visited,
   .repository-list li a:hover,
@@ -142,16 +138,16 @@ html, body {
     font-family: sans-serif; }
 
 .projects-list {
-  display: flex;
-  flex-flow: row wrap;
+  display: inline-block;
   padding: 0; }
 
 .projects-list li {
   list-style-type: none;
+  width: 12em;
   margin: 0.3em;
-  display: flex;
+  display: inline-block;
   animation-name: slidein;
-  flex: 1 0 30%; }
+  vertical-align: middle; }
   .projects-list li:nth-child(1) {
     animation-duration: 0.1s; }
   .projects-list li:nth-child(2) {
@@ -352,13 +348,12 @@ html, body {
     animation-duration: 9.9s; }
   .projects-list li a {
     text-decoration: none;
-    display: flex;
+    display: block;
     padding: 0.4em;
     border: solid 0.1em #fff;
     border-right-color: #FFD700;
     background-color: #fff;
-    border-radius: 0.2em;
-    flex-basis: 100%; }
+    border-radius: 0.2em; }
   .projects-list li a:link,
   .projects-list li a:visited,
   .projects-list li a:hover,
