@@ -111,7 +111,7 @@ html, body {
     text-decoration: none;
     display: block;
     padding: 0.4em;
-    border: solid 0.1em #fff;
+    border: solid 0.3em #fff;
     border-right-color: #FFD700;
     background-color: #fff;
     border-radius: 0.2em; }
@@ -123,7 +123,7 @@ html, body {
     color: #000; }
   .repository-list li > a:hover {
     background-color: #FFD700;
-    border: solid 0.1em #FFD700;
+    border: solid 0.3em #FFD700;
     border-radius: 0.2em; }
 
 @keyframes slidein {
@@ -350,10 +350,12 @@ html, body {
     text-decoration: none;
     display: block;
     padding: 0.4em;
-    border: solid 0.1em #fff;
+    border: solid 0.3em #fff;
     border-right-color: #FFD700;
     background-color: #fff;
     border-radius: 0.2em; }
+  .projects-list li a.available {
+    border-right-color: green; }
   .projects-list li a:link,
   .projects-list li a:visited,
   .projects-list li a:hover,
@@ -362,7 +364,7 @@ html, body {
     color: #000; }
   .projects-list li > a:hover {
     background-color: #FFD700;
-    border: solid 0.1em #FFD700;
+    border: solid 0.3em #FFD700;
     border-radius: 0.2em; }
 
 @media screen and (max-width: 720px) {

@@ -167,7 +167,7 @@ html, body {
 			text-decoration: none;
 			display: block;
 			padding: 0.4em;
-			border: solid 0.1em $white;
+			border: solid 0.3em $white;
 			border-right-color: $gold;
 			background-color: $white;
 			border-radius: 0.2em;
@@ -183,7 +183,7 @@ html, body {
 
 		> a:hover {
 			background-color: $gold;
-			border: solid 0.1em $gold;
+			border: solid 0.3em $gold;
 			border-radius: 0.2em;
 		}
 
@@ -233,11 +233,14 @@ html, body {
 		text-decoration: none;
 		display: block;
 		padding: 0.4em;
-		border: solid 0.1em $white;
+		border: solid 0.3em $white;
 		border-right-color: $gold;
 		background-color: $white;
 		border-radius: 0.2em;
+	}
 
+	a.available {
+		border-right-color: green;
 	}
 
 	a:link,
@@ -250,7 +253,7 @@ html, body {
 
 	> a:hover {
 		background-color: $gold;
-		border: solid 0.1em $gold;
+		border: solid 0.3em $gold;
 		border-radius: 0.2em;
 	}
 }
