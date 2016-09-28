@@ -112,7 +112,7 @@ html, body {
     display: block;
     padding: 0.4em;
     border: solid 0.3em #fff;
-    border-right-color: #FFD700;
+    border-right-color: green;
     background-color: #fff;
     border-radius: 0.2em; }
   .repository-list li a:link,
