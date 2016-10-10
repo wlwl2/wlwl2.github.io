@@ -3,174 +3,253 @@ $white: #fff;
 $black: #000;
 $gold: #FFD700;
 
-html, body {
-	margin: 0;
-	height: 100%;
-	background-color: $whole-page-background;
-	font-family: sans-serif;
+@keyframes slidein {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+
 }
 
-.menu-container {
-	display: block;
-	background-color: $white;
-	padding: .5em 0;
-	font-size: 1.4em;
+@media screen and (min-width: 1024px) {
 
-	.home-button-name {
-		display: inline-block;
+	html, body {
+		margin: 0;
+		height: 100%;
+		background-color: $whole-page-background;
+		font-family: sans-serif;
 	}
 
-	.home-button {
-		padding: 0;
-		display: inline-block;
-		width: 25%;
+	.menu-container {
+		display: block;
+		background-color: $white;
+		padding: .5em 0;
+		font-size: 1.4em;
 
-		a {
+		.home-button-name {
 			display: inline-block;
-			height: auto;
-			text-decoration: none;
-			border-style: solid;
-			border-width: thin;
-			padding: 0.3em;
-			border-radius: 0.3em;
-			background-color: #f5f5f5;
-			margin: 0 0.4em;
+		}
 
-			img {
-				display: inline-block;
-				height: 1em;
-				vertical-align: top;
+		.home-button {
+			padding: 0;
+			display: inline-block;
+			width: 25%;
+
+			a {
+				height: auto;
+				text-decoration: none;
+				border-style: solid;
+				border-width: thin;
+				padding: 0.3em;
+				border-radius: 0.3em;
+				background-color: #f5f5f5;
+				margin: 0 0.4em;
+
+				img {
+					display: inline-block;
+					height: 1em;
+					vertical-align: top;
+				}
+			}
+
+			a:link,
+			a:visited,
+			a:focus {
+				color: $black;
+			}
+
+			a:hover {
+				background-color: $white;
+			}
+
+			a:active {
+				background-color: $gold;
+			}
+
+		}
+
+		.menu {
+			display:inline-block;
+			margin:auto;
+			width: 50%;
+
+			> ul {
+				text-align: center;
+				margin: 0;
+				padding: 0;
+			}
+
+			// menu buttons
+			> ul > li {
+				display: inline-table;
+
+				> a {
+					display: inline-block;
+					padding: .5em;
+					margin: 0 .5em;
+					font-family: sans-serif;
+					border: solid 0.1em $white;
+					border-top-color: $gold;
+
+					color: $black;
+					text-decoration: none;
+
+				}
+
+				> a:hover {
+					background-color: $gold;
+					border: solid 0.1em $gold;
+					border-radius: 0.2em;
+				}
 			}
 		}
-
-		a:link,
-		a:visited,
-		a:focus {
-			color: $black;
-		}
-
-		a:hover {
-			background-color: $white;
-		}
-
-		a:active {
-			background-color: $gold;
-		}
-
 	}
 
-	.menu {
-		display:inline-block;
-		margin:auto;
-		width: 50%;
+	.desktop-home-button {
+		display: inline-block;
+	}
 
-		> ul {
-			text-align: center;
+	.mobile-home-button {
+		display: none;
+	}
+
+	.space {
+		display: inline-block;
+		width: auto;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+
+	.sections {
 			margin: 0;
+	}
+
+	.home {
+		padding: 0 3em;
+		font-size: 1.4em;
+		// text-align: center;
+
+	 	> p {
+		font-family: sans-serif;
+		}
+
+		button {
+			border-radius: .5em;
+			background-color: $gold;
+			border-color: $gold;
+			padding: 0;
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				font-size: 1.6em;
+				padding: 1em;
+			}
+
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a:focus  {
+				color: $black;
+			}
+		}
+	}
+
+	.repositories {
+		padding: 0 3em;
+		font-size: 1.4em;
+
+		ul {
 			padding: 0;
 		}
 
-		// menu buttons
-		> ul > li {
-			display: inline-table;
+		> p {
+		font-family: sans-serif;
+		}
+	}
 
-			> a {
-				display: inline-block;
-				padding: .5em;
-				margin: 0 .5em;
-				font-family: sans-serif;
-				border: solid 0.1em $white;
-				border-top-color: $gold;
+	.repository-list li {
+		list-style-type: none;
+		width: 12em;
+		margin: 0.3em;
+		display: inline-block;
+		vertical-align: middle;
 
-				color: $black;
+
+			a {
 				text-decoration: none;
+				display: block;
+				padding: 0.4em;
+				border: solid 0.3em $white;
+				border-right-color: green;
+				background-color: $white;
+				border-radius: 0.2em;
+			}
 
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a:focus  {
+				color: $black;
 			}
 
 			> a:hover {
 				background-color: $gold;
-				border: solid 0.1em $gold;
+				border: solid 0.3em $gold;
 				border-radius: 0.2em;
 			}
-		}
-	}
-}
 
-.space {
-	display: inline-block;
-	width: auto;
-}
-
-.hidden {
-	display: none;
-}
-
-
-.sections {
-		margin: 0;
-}
-
-.home {
-	padding: 0 3em;
-	font-size: 1.4em;
-	// text-align: center;
-
- 	> p {
-	font-family: sans-serif;
 	}
 
-	button {
-		border-radius: .5em;
-		background-color: $gold;
-		border-color: $gold;
-		padding: 0;
+	.projects {
+		padding: 0 3em;
+		font-size: 1.4em;
 
-		a {
-			display: inline-block;
-			text-decoration: none;
-			font-size: 1.6em;
-			padding: 1em;
-		}
-
-		a:link,
-		a:visited,
-		a:hover,
-		a:active,
-		a:focus  {
-			color: $black;
+		> p {
+		font-family: sans-serif;
 		}
 	}
-}
 
-.repositories {
-	padding: 0 3em;
-	font-size: 1.4em;
-
-	ul {
+	.projects-list {
+		display: inline-block;
 		padding: 0;
 	}
 
-	> p {
-	font-family: sans-serif;
-	}
-}
+	.projects-list li {
+		list-style-type: none;
+		width: 11.9em;
+		margin: 0.3em;
+		display: inline-block;
+		animation-name: slidein;
+		vertical-align: middle;
 
-.repository-list li {
-	list-style-type: none;
-	width: 12em;
-	margin: 0.3em;
-	display: inline-block;
-	vertical-align: middle;
 
+		@for $i from 1 to 100 {
+			&:nth-child(#{$i}) {
+				animation-duration: 0.1s * $i;
+			}
+		}
 
 		a {
 			text-decoration: none;
 			display: block;
 			padding: 0.4em;
 			border: solid 0.3em $white;
-			border-right-color: green;
+			border-right-color: $gold;
 			background-color: $white;
 			border-radius: 0.2em;
+		}
+
+		a.available {
+			border-right-color: green;
 		}
 
 		a:link,
@@ -186,80 +265,275 @@ html, body {
 			border: solid 0.3em $gold;
 			border-radius: 0.2em;
 		}
-
-}
-
-@keyframes slidein {
-	0% {
-		transform: translateX(-100%);
 	}
 
-	100% {
-		transform: translateX(0);
+
+}
+
+@media screen and (max-width: 1023px) {
+
+	html, body {
+		margin: 0;
+		height: 100%;
+		background-color: $whole-page-background;
+		font-family: sans-serif;
 	}
 
-}
+	.menu-container {
+		display: block;
+		background-color: $white;
+		padding: 0;
+		font-size: 1.4em;
 
-.projects {
-	padding: 0 3em;
-	font-size: 1.4em;
+		.home-button-name {
+			display: inline-block;
+		}
 
-	> p {
-	font-family: sans-serif;
-	}
-}
+		.home-button {
+			padding: 0;
+			display: inline-block;
+			width: 100%;
+			text-align: center;
 
-.projects-list {
-	display: inline-block;
-	padding: 0;
-}
+			a {
+				height: auto;
+				text-decoration: none;
+				width: 100%;
 
-.projects-list li {
-	list-style-type: none;
-	width: 11.9em;
-	margin: 0.3em;
-	display: inline-block;
-	animation-name: slidein;
-	vertical-align: middle;
+				padding: 0.8em 0.3em 0.5em;
+				background-color: #f5f5f5;
+				margin: 0 auto;
 
+				img {
+					display: inline-block;
+					height: 1em;
+					vertical-align: top;
+					position: relative;
+					left: -.4em;
+				}
 
-	@for $i from 1 to 100 {
-		&:nth-child(#{$i}) {
-			animation-duration: 0.1s * $i;
+				.home-button-name {
+					position: relative;
+					left: -.3em;
+				}
+			}
+
+			a:link,
+			a:visited,
+			a:focus {
+				color: $black;
+			}
+
+			a:hover {
+				background-color: $white;
+			}
+
+			a:active {
+				background-color: $gold;
+			}
+
+		}
+
+		.menu {
+			display:inline-block;
+			margin: auto;
+			width: 100%;
+
+			> ul {
+				text-align: center;
+				margin: 0;
+				padding: 0;
+			}
+
+			// menu buttons
+			> ul > li {
+				display: inline-block;
+				width: 100%;
+
+				> a {
+					display: inline-block;
+					padding: .5em 0;
+					margin: 0;
+					font-family: sans-serif;
+					border: solid 0.1em $white;
+					border-top-color: $gold;
+					width: 100%;
+					color: $black;
+					text-decoration: none;
+				}
+
+				> a:hover {
+					background-color: $gold;
+					border: solid 0.1em $gold;
+					border-radius: 0.2em;
+				}
+			}
+			> ul > li:last-child > a {
+				border-bottom-color: $gold;
+			}
+
 		}
 	}
 
-	a {
-		text-decoration: none;
-		display: block;
-		padding: 0.4em;
-		border: solid 0.3em $white;
-		border-right-color: $gold;
-		background-color: $white;
-		border-radius: 0.2em;
+	.desktop-home-button {
+		display: none;
 	}
 
-	a.available {
-		border-right-color: green;
+	.mobile-home-button {
+		display: inline-block;
 	}
 
-	a:link,
-	a:visited,
-	a:hover,
-	a:active,
-	a:focus  {
-		color: $black;
+	.space {
+		display: none;
+		width: auto;
 	}
 
-	> a:hover {
-		background-color: $gold;
-		border: solid 0.3em $gold;
-		border-radius: 0.2em;
+	.hidden {
+		display: none;
 	}
-}
 
-@media screen and (max-width: 720px) {
-	.menu > ul > li {
-		display: block;
+
+	.sections {
+			margin: 0;
 	}
+
+	.home {
+		padding: 0 3em;
+		font-size: 1.4em;
+		text-align: center;
+
+	 	> p {
+		font-family: sans-serif;
+		}
+
+		button {
+			border-radius: .5em;
+			background-color: $gold;
+			border-color: $gold;
+			padding: 0;
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				font-size: 1.6em;
+				padding: 1em;
+			}
+
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a:focus  {
+				color: $black;
+			}
+		}
+	}
+
+
+
+	.repositories {
+		padding: 0 3em;
+		font-size: 1.4em;
+
+		ul {
+			padding: 0;
+		}
+
+		> p {
+		font-family: sans-serif;
+		}
+	}
+
+	.repository-list li {
+		list-style-type: none;
+		width: 12em;
+		margin: 0.3em;
+		display: inline-block;
+		vertical-align: middle;
+
+
+			a {
+				text-decoration: none;
+				display: block;
+				padding: 0.4em;
+				border: solid 0.3em $white;
+				border-right-color: green;
+				background-color: $white;
+				border-radius: 0.2em;
+			}
+
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a:focus  {
+				color: $black;
+			}
+
+			> a:hover {
+				background-color: $gold;
+				border: solid 0.3em $gold;
+				border-radius: 0.2em;
+			}
+
+	}
+
+	.projects {
+		padding: 0 3em;
+		font-size: 1.4em;
+
+		> p {
+		font-family: sans-serif;
+		}
+	}
+
+	.projects-list {
+		display: inline-block;
+		padding: 0;
+	}
+
+	.projects-list li {
+		list-style-type: none;
+		width: 11.9em;
+		margin: 0.3em;
+		display: inline-block;
+		animation-name: slidein;
+		vertical-align: middle;
+
+
+		@for $i from 1 to 100 {
+			&:nth-child(#{$i}) {
+				animation-duration: 0.1s * $i;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 0.4em;
+			border: solid 0.3em $white;
+			border-right-color: $gold;
+			background-color: $white;
+			border-radius: 0.2em;
+		}
+
+		a.available {
+			border-right-color: green;
+		}
+
+		a:link,
+		a:visited,
+		a:hover,
+		a:active,
+		a:focus  {
+			color: $black;
+		}
+
+		> a:hover {
+			background-color: $gold;
+			border: solid 0.3em $gold;
+			border-radius: 0.2em;
+		}
+	}
+
 }
