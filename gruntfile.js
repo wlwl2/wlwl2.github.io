@@ -4,10 +4,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
-      dev: {
-        src: ['sass/*.scss'],
-        dest: 'css/style.css',
-      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'sass',
+          src: ['*.scss'],
+          dest: './css',
+          ext: '.css'
+        }]
+    }
     },
     watch: {
       sass: {
