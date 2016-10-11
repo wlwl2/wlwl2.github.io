@@ -178,6 +178,7 @@ $gold: #FFD700;
 	.repositories {
 		padding: 0;
 		font-size: 1.4em;
+		text-align: center;
 
 		h1 {
 			padding: 0.3em;
@@ -194,7 +195,7 @@ $gold: #FFD700;
 
 	.repository-list li {
 		list-style-type: none;
-		width: 12em;
+		width: 100%;
 		margin: 0.3em 0;
 		display: block;
 		vertical-align: middle;
@@ -229,6 +230,7 @@ $gold: #FFD700;
 	.projects {
 		padding: 0;
 		font-size: 1.4em;
+		text-align: center;
 
 		> p {
 		font-family: sans-serif;
@@ -242,8 +244,8 @@ $gold: #FFD700;
 
 	.projects-list li {
 		list-style-type: none;
-		width: 11.9em;
-		margin: 0.3em;
+		width: 100%;
+		margin: 0.3em 0;
 		display: block;
 		animation-name: slidein;
 		vertical-align: middle;
@@ -260,13 +262,13 @@ $gold: #FFD700;
 			display: block;
 			padding: 0.4em;
 			border: solid 0.3em $white;
-			border-right-color: $gold;
+			border-bottom-color: $gold;
 			background-color: $white;
 			border-radius: 0.2em;
 		}
 
 		a.available {
-			border-right-color: green;
+			border-bottom-color: green;
 		}
 
 		a:link,

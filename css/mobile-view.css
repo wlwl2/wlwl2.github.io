@@ -115,7 +115,8 @@
 
   .repositories {
     padding: 0;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    text-align: center; }
     .repositories h1 {
       padding: 0.3em; }
     .repositories ul {
@@ -125,7 +126,7 @@
 
   .repository-list li {
     list-style-type: none;
-    width: 12em;
+    width: 100%;
     margin: 0.3em 0;
     display: block;
     vertical-align: middle; }
@@ -150,7 +151,8 @@
 
   .projects {
     padding: 0;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    text-align: center; }
     .projects > p {
       font-family: sans-serif; }
 
@@ -160,8 +162,8 @@
 
   .projects-list li {
     list-style-type: none;
-    width: 11.9em;
-    margin: 0.3em;
+    width: 100%;
+    margin: 0.3em 0;
     display: block;
     animation-name: slidein;
     vertical-align: middle; }
@@ -368,11 +370,11 @@
       display: block;
       padding: 0.4em;
       border: solid 0.3em #fff;
-      border-right-color: #FFD700;
+      border-bottom-color: #FFD700;
       background-color: #fff;
       border-radius: 0.2em; }
     .projects-list li a.available {
-      border-right-color: green; }
+      border-bottom-color: green; }
     .projects-list li a:link,
     .projects-list li a:visited,
     .projects-list li a:hover,
