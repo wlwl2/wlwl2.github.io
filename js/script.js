@@ -42,7 +42,7 @@
   }
 })();
 
-// Shows sections on button click on top menu
+// Shows sections on button click on desktop menu
 (function topMenu () {
   for(var i = 0, items = document.querySelectorAll('.menu ul li'); i < items.length; i++) {
   (function (i) {
@@ -63,6 +63,7 @@
 }
 })();
 
+// Opens and Closes the mobile menu ONLY!
 (function mobileMenu () {
   let mobileMenuToggle = document.querySelector('.mobile-menu__open-menu')
   let mobileMenuToggleText = document.querySelector('.mobile-menu__open-menu-text span')
@@ -79,7 +80,7 @@
   }, false)
 })();
 
-// Shows sections on button click on top menu
+// Shows sections on button click on mobile menu.
 (function mobileSectionsMenu () {
   for(var i = 0, items = document.querySelectorAll('.mobile-menu__container ul li'); i < items.length; i++) {
   (function (i) {
@@ -97,5 +98,22 @@
       sections[i].className = selectedSection
     }, false)
   })(i);
-}
+  }
+})();
+
+// Search
+(function () {
+  let searchInput = document.querySelector('.repository-search__input')
+  let repositoryList = document.querySelector('.repository-list')
+  searchInput.addEventListener('input', function (event) {
+    let listItem = repositoryList.children
+    for (var i = 0; i < listItem.length; i++) {
+        listItem[i].className = 'hidden'
+    }
+    for (var i = 0; i < listItem.length; i++) {
+      if (listItem[i].children[0].textContent.toUpperCase().indexOf(searchInput.value.toUpperCase()) !== -1) {
+        listItem[i].className = ''
+      }
+    }
+  }, false)
 })();

@@ -160,8 +160,9 @@ body {
           display: table-cell;
           vertical-align: middle;
           color: #fff; } }
-.search input[type="text"] {
-  font-size: 20px; }
+.repository-search input[type="text"] {
+  font-size: 20px;
+  padding: 5px; }
 
 .projects > p {
   font-family: sans-serif; }
@@ -663,6 +664,9 @@ body {
   .repository-list li a:focus {
     background-color: #fff;
     color: black; }
+
+.repository-list li.hidden {
+  display: none; }
 
 @media screen and (max-width: 1023px) {
   .repositories ul {
