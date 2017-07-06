@@ -1,0 +1,39 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #fff;
+	font-family: sans-serif;
+	margin: 0 0 60px 0;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.sections {
+		margin: 0;
+
+		section {
+			padding: 0 10px;
+			font-size: $normal;
+
+			h1 {
+				display: inline-block;
+				width: 100%;
+			}
+		}
+}
+
+
+@media screen and (max-width: 1023px) {
+
+	.space {
+		display: none;
+		width: auto;
+	}
+}

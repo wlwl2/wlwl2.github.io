@@ -1,5 +1,4 @@
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -8,7 +7,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'sass',
-          src: ['*.scss'],
+          src: ['style.scss'],
           dest: './css',
           ext: '.css'
         }]
@@ -18,16 +17,30 @@ module.exports = function(grunt) {
       sass: {
         // We watch and compile sass files as normal but don't live reload here
         files: ['sass/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass']
+      }
+    },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+              'css/style.css',
+              '*.html'
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: './'
+        }
       }
     }
-  });
+  })
 
   // Load the plugins
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-sass')
+  grunt.loadNpmTasks('grunt-browser-sync')
 
   // Default task(s).
-  grunt.registerTask('default', ['sass']);
-
-};
+  grunt.registerTask('default', ['browserSync', 'watch'])
+}

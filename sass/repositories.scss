@@ -1,0 +1,94 @@
+.repositories {
+
+	ul {
+		padding: 0;
+	}
+
+	> p {
+	font-family: sans-serif;
+	}
+}
+
+.repository-list li {
+	list-style-type: none;
+	margin: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid black;
+	border-radius: $border-radius;
+
+	a {
+		width: 200px;
+		overflow-x: hidden;
+		text-decoration: none;
+		display: block;
+		padding: 10px 0 10px 10px;
+		background-color: #fff;
+		white-space: nowrap;
+		border-right: 10px solid transparent;
+		border-radius: $border-radius;
+
+	}
+
+	a:link,
+	a:visited {
+    background-color: $light-grey;
+		color: black;
+	}
+
+  a:hover,
+	a:active,
+	a:focus  {
+    background-color: $white;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+	.repositories {
+
+		ul {
+			padding: 0;
+		}
+
+		> p {
+		font-family: sans-serif;
+		}
+	}
+
+	.repository-list li {
+		list-style-type: none;
+		margin: 10px;
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid black;
+		border-radius: $border-radius;
+
+		a {
+			width: 200px;
+			overflow-x: hidden;
+			text-decoration: none;
+			display: block;
+			padding: 10px 0 10px 10px;
+			background-color: #fff;
+			white-space: nowrap;
+			border-right: 10px solid transparent;
+			border-radius: $border-radius;
+
+		}
+
+		a:link,
+		a:visited {
+	    background-color: $light-grey;
+			color: black;
+		}
+
+	  a:hover,
+		a:active,
+		a:focus  {
+	    background-color: $white;
+	    color: black;
+	  }
+	}
+}

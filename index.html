@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>My Github Page</title>
-    <link rel="stylesheet" href="css/desktop-view.css">
-    <link rel="stylesheet" href="css/mobile-view.css">
+    <link rel="stylesheet" href="css/style.css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,44 +20,47 @@
 
     <div class="menu-container">
       <div class="home-button">
-        <a class="desktop-home-button" href="https://github.com/wlwl2">
-          <img src="images/black-github-mark.svg" />
-          <span class="home-button-name">wlwl2</span>
-        </a>
-        <a class="mobile-home-button" href="https://github.com/wlwl2">
-          <img src="images/black-github-mark.svg" />
-          <span class="home-button-name">wlwl2</span>
+        <a class="home-button__link" href="https://github.com/wlwl2">
+          <div class="home-button__link-container">
+            <img src="images/black-github-mark.svg" />
+            <span class="home-button__name">wlwl2</span>
+          </div>
         </a>
       </div>
       <nav class="menu">
         <ul>
-          <li><a class="menu-button" href="#">Home</a></li>
-          <li><a class="menu-button" href="#">Repositories</a></li>
-          <li><a class="menu-button" href="#">Projects</a></li>
+          <li><a class="menu-button">About Me</a></li>
+          <li><a class="menu-button">Repositories</a></li>
+          <li><a class="menu-button">Projects</a></li>
         </ul>
       </nav>
-      <div class="space"></div>
     </div>
 
     <div class="sections">
-      <section class="home hidden">
-        <h1>My Github Page</h1>
-        <p>You can see my work here!</p>
-        <p>View my repository:</p>
+      <section class="about hidden">
+        <h1>About Me</h1>
         <p>
-          <button><a target="_blank" href="https://github.com/wlwl2">in a new window/tab</a></button>
-          or
-          <button><a href="https://github.com/wlwl2">in the same window/tab</a></button>.
+          Hi, my name is William. I develop
+          websites, web applications and apps.
+        </p>
+        <p>
+          I'm currently based in: Singapore.
+        </p>
+        <p>
+          Here is my <a href="https://github.com/wlwl2">github link</a>.
         </p>
       </section>
 
       <section class="repositories hidden">
         <h1>My Repositories</h1>
+        <div class="search">
+          <input type="text" name="" value="">
+        </div>
         <ul class="repository-list"></ul>
       </section>
 
       <section class="projects">
-        <h1>Helpful Projects</h1>
+        <h1>Projects</h1>
         <ul class="projects-list">
           <li><a class="available" href="http://wlwl2.github.io/color/">color</a></li>
           <li><a class="available" href="https://atom.io/packages/open-file">open-file</a></li>
@@ -66,6 +68,21 @@
           <li><a class="" href="">pixel-image-creator</a></li>
         </ul>
       </section>
+    </div>
+
+    <div class="mobile-menu">
+      <nav class="mobile-menu__container">
+        <ul class="hidden">
+          <li><a class="mobile-menu__link">About Me</a></li>
+          <li><a class="mobile-menu__link">Repositories</a></li>
+          <li><a class="mobile-menu__link">Projects</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu__open-menu">
+        <div class="mobile-menu__open-menu-text">
+          <span>Menu</span>
+        </div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>
