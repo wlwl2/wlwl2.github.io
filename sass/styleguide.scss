@@ -6,3 +6,15 @@ $white: #fff;
 $normal: 20px;
 
 $border-radius: 3px;
+
+@font-face {
+  font-family: 'LatoLatinLight';
+  src: url('../fonts/LatoLatin-Light.eot'); /* IE9 Compat Modes */
+  src: // url('../fonts/LatoLatin-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/LatoLatin-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/LatoLatin-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/LatoLatin-Light.eot') format('truetype'), /* Safari, Android, iOS */
+       // url('../fonts/LatoLatin-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+$LatoLatinLight: 'LatoLatinLight', sans-serif;

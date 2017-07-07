@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'LatoLatinLight';
+  src: url("../fonts/LatoLatin-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/LatoLatin-Light.woff2") format("woff2"), url("../fonts/LatoLatin-Light.woff") format("woff"), url("../fonts/LatoLatin-Light.eot") format("truetype"); }
 @keyframes slidein {
   0% {
     transform: translateX(-100%); }
@@ -10,7 +15,7 @@ html {
 body {
   margin: 0;
   background-color: #fff;
-  font-family: sans-serif;
+  font-family: "LatoLatinLight", sans-serif;
   margin: 0 0 60px 0;
   text-align: center; }
 
@@ -82,7 +87,6 @@ body {
         display: inline-block;
         margin: 10px;
         padding: 10px;
-        font-family: sans-serif;
         border: solid 1px #fff;
         text-decoration: none;
         border-radius: 3px;
@@ -130,7 +134,6 @@ body {
           display: block;
           margin: 10px;
           padding: 10px;
-          font-family: sans-serif;
           border: solid 1px #fff;
           text-decoration: none;
           border-radius: 3px;
@@ -162,10 +165,11 @@ body {
           color: #fff; } }
 .repository-search input[type="text"] {
   font-size: 20px;
-  padding: 5px; }
+  padding: 5px;
+  font-family: "LatoLatinLight", sans-serif; }
 
 .projects > p {
-  font-family: sans-serif; }
+  font-family: "LatoLatinLight", sans-serif; }
 
 .projects-list {
   display: inline-block;
@@ -400,8 +404,6 @@ body {
 @media screen and (max-width: 1023px) {
   .projects h1 {
     text-align: center; }
-  .projects > p {
-    font-family: sans-serif; }
 
   .projects-list {
     display: block;
@@ -636,7 +638,7 @@ body {
 .repositories ul {
   padding: 0; }
 .repositories > p {
-  font-family: sans-serif; }
+  font-family: "LatoLatinLight", sans-serif; }
 
 .repository-list li {
   list-style-type: none;
@@ -671,8 +673,6 @@ body {
 @media screen and (max-width: 1023px) {
   .repositories ul {
     padding: 0; }
-  .repositories > p {
-    font-family: sans-serif; }
 
   .repository-list li {
     list-style-type: none;
