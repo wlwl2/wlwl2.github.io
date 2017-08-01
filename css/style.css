@@ -19,9 +19,6 @@ body {
   margin: 0 0 60px 0;
   text-align: center; }
 
-.hidden {
-  display: none; }
-
 .sections {
   margin: 0; }
   .sections section {
@@ -30,6 +27,8 @@ body {
     .sections section h1 {
       display: inline-block;
       width: 100%; }
+  .sections section[data-section-hidden="yes"] {
+    display: none; }
 
 @media screen and (max-width: 1023px) {
   .space {

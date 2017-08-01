@@ -29,15 +29,15 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a class="menu-button">About Me</a></li>
-          <li><a class="menu-button">Repositories</a></li>
-          <li><a class="menu-button">Projects</a></li>
+          <li><a class="menu-button" data-section-id="about-me">About Me</a></li>
+          <li><a class="menu-button" data-section-id="repositories">Repositories</a></li>
+          <li><a class="menu-button" data-section-id="projects">Projects</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="sections">
-      <section class="about hidden">
+      <section class="about" data-section-id="about-me" data-section-hidden="yes">
         <h1>About Me</h1>
         <p>
           Hi, my name is William. I develop websites, games, and other
@@ -52,7 +52,7 @@
         </p>
       </section>
 
-      <section class="repositories hidden">
+      <section class="repositories" data-section-id="repositories" data-section-hidden="yes">
         <h1>My Repositories</h1>
         <div class="repository-search">
           <input class="repository-search__input" type="text" name="" value="" placeholder="Search for a repository...">
@@ -60,7 +60,7 @@
         <ul class="repository-list"></ul>
       </section>
 
-      <section class="projects">
+      <section class="projects" data-section-id="projects" data-section-hidden="no">
         <h1>Projects</h1>
         <ul class="projects-list">
           <li><a href="http://wlwl2.github.io/color/">Color</a></li>
@@ -75,9 +75,9 @@
     <div class="mobile-menu">
       <nav class="mobile-menu__container">
         <ul class="hidden">
-          <li><a class="mobile-menu__link">About Me</a></li>
-          <li><a class="mobile-menu__link">Repositories</a></li>
-          <li><a class="mobile-menu__link">Projects</a></li>
+          <li><a class="mobile-menu__link" data-section-id="about-me">About Me</a></li>
+          <li><a class="mobile-menu__link" data-section-id="repositories">Repositories</a></li>
+          <li><a class="mobile-menu__link" data-section-id="projects">Projects</a></li>
         </ul>
       </nav>
       <div class="mobile-menu__open-menu">

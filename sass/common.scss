@@ -11,22 +11,22 @@ body {
 	text-align: center;
 }
 
-.hidden {
-	display: none;
-}
-
 .sections {
-		margin: 0;
+	margin: 0;
 
-		section {
-			padding: 0 10px;
-			font-size: $normal;
+	section {
+		padding: 0 10px;
+		font-size: $normal;
 
-			h1 {
-				display: inline-block;
-				width: 100%;
-			}
+		h1 {
+			display: inline-block;
+			width: 100%;
 		}
+	}
+
+  section[data-section-hidden="yes"] {
+    display: none;
+  }
 }
 
 

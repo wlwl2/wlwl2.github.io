@@ -44,23 +44,30 @@
 
 // Shows sections on button click on desktop menu
 (function topMenu () {
-  for(var i = 0, items = document.querySelectorAll('.menu ul li'); i < items.length; i++) {
-  (function (i) {
-    items[i].addEventListener('click', function (event) {
-      var sections = document.querySelectorAll('.sections section')
-      for(var j = 0; j < sections.length; j++) {
-        if (sections[j].className.search(/hidden/) !== -1) {
-          sections[j].className = sections[j].className.replace(' hidden', '')
+  var items = document.querySelectorAll('.menu ul li a')
+  var sections = document.querySelectorAll('.sections section')
+
+  function showSection (index) {
+    items[index].addEventListener('click', function (event) {
+      hideAllSections()
+      for (var i = 0; i < sections.length; i++) {
+        if (event.target.getAttribute('data-section-id') ===
+        sections[i].getAttribute('data-section-id')) {
+          sections[i].setAttribute('data-section-hidden', 'no')
         }
       }
-      var selectedSection = sections[i].className
-      for(var k = 0; k < sections.length; k++) {
-        sections[k].className += ' hidden'
-      }
-      sections[i].className = selectedSection
     }, false)
-  })(i);
-}
+  }
+
+  function hideAllSections () {
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].setAttribute('data-section-hidden', 'yes')
+    }
+  }
+
+  for (var i = 0; i < items.length; i++) {
+    showSection(i)
+  }
 })();
 
 // Opens and Closes the mobile menu ONLY!
@@ -82,37 +89,44 @@
 
 // Shows sections on button click on mobile menu.
 (function mobileSectionsMenu () {
-  for(var i = 0, items = document.querySelectorAll('.mobile-menu__container ul li'); i < items.length; i++) {
-  (function (i) {
-    items[i].addEventListener('click', function (event) {
-      var sections = document.querySelectorAll('.sections section')
-      for(var j = 0; j < sections.length; j++) {
-        if (sections[j].className.search(/hidden/) !== -1) {
-          sections[j].className = sections[j].className.replace(' hidden', '')
+  var items = document.querySelectorAll('.mobile-menu__container ul li a')
+  var sections = document.querySelectorAll('.sections section')
+
+  function showSection (index) {
+    items[index].addEventListener('click', function (event) {
+      hideAllSections()
+      for (var i = 0; i < sections.length; i++) {
+        if (event.target.getAttribute('data-section-id') ===
+        sections[i].getAttribute('data-section-id')) {
+          sections[i].setAttribute('data-section-hidden', 'no')
         }
       }
-      var selectedSection = sections[i].className
-      for(var k = 0; k < sections.length; k++) {
-        sections[k].className += ' hidden'
-      }
-      sections[i].className = selectedSection
     }, false)
-  })(i);
+  }
+
+  function hideAllSections () {
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].setAttribute('data-section-hidden', 'yes')
+    }
+  }
+
+  for (var i = 0; i < items.length; i++) {
+    showSection(i)
   }
 })();
 
-// Search
-(function () {
+// Repository Search
+(function repositorySearch () {
   let searchInput = document.querySelector('.repository-search__input')
   let repositoryList = document.querySelector('.repository-list')
   searchInput.addEventListener('input', function (event) {
     let listItem = repositoryList.children
     for (var i = 0; i < listItem.length; i++) {
-        listItem[i].className = 'hidden'
+      listItem[i].className = 'hidden'
     }
-    for (var i = 0; i < listItem.length; i++) {
-      if (listItem[i].children[0].textContent.toUpperCase().indexOf(searchInput.value.toUpperCase()) !== -1) {
-        listItem[i].className = ''
+    for (var j = 0; j < listItem.length; j++) {
+      if (listItem[j].children[0].textContent.toUpperCase().indexOf(searchInput.value.toUpperCase()) !== -1) {
+        listItem[j].className = ''
       }
     }
   }, false)
