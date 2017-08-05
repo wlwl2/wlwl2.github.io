@@ -1,11 +1,10 @@
 // adds the list of my repos to the menu async
 (function myRepositoriesMenu () {
   var httpRequest
-  makeRequest('https://api.github.com/users/wlwl2/repos')
-
+  makeRequest('https://api.github.com/users/wlwl2/repos?per_page=99')
   function makeRequest (url) {
     // The XMLHttpRequest() constructor initiates a XMLHttpRequest. It must be called before any other method calls.
-    httpRequest = new XMLHttpRequest()
+    httpRequest = new window.XMLHttpRequest()
 
     // XMLHttpRequest.onreadystatechange = callback;
     // callback is the function to be executed when the readyState changes.
@@ -15,17 +14,7 @@
   }
 
   function alertContents () {
-    /*
-    The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in.
-    An XHR client exists in one of the following states:
-    Value State	            Description
-    0	    UNSENT	          Client has been created. open() not called yet.
-    1	    OPENED	          open() has been called.
-    2	    HEADERS_RECEIVED	send() has been called, and headers and status are available.
-    3	    LOADING	          Downloading; responseText holds partial data.
-    4	    DONE	            The operation is complete.
-    */
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest.readyState === window.XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         var repoList = document.querySelector('.repository-list')
         var myRepositoriesObject = JSON.parse(httpRequest.responseText)
