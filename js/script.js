@@ -1,7 +1,7 @@
 // adds the list of my repos to the menu async
 (function myRepositoriesMenu () {
   var httpRequest
-  makeRequest('https://api.github.com/users/wlwl2/repos?per_page=99')
+  makeRequest('https://api.github.com/users/wlwl2/repos?per_page=100')
   function makeRequest (url) {
     // The XMLHttpRequest() constructor initiates a XMLHttpRequest. It must be called before any other method calls.
     httpRequest = new window.XMLHttpRequest()
