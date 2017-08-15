@@ -1,55 +1,68 @@
 .projects {
+
 	> p {
-	font-family: $LatoLatinLight;
-	}
-}
-
-.projects-list {
-	display: inline-block;
-	padding: 0;
-}
-
-.projects-list li {
-	list-style-type: none;
-	margin: 10px;
-	display: inline-block;
-	vertical-align: middle;
-	border: 1px solid black;
-	border-radius: $border-radius;
-	animation-name: slidein;
-
-
-	@for $i from 1 to 100 {
-		&:nth-child(#{$i}) {
-			animation-duration: 0.1s * $i;
-		}
+	   font-family: $LatoLatinLight;
 	}
 
-	a {
-		width: 200px;
-		overflow-x: hidden;
-		text-decoration: none;
-		display: block;
-		padding: 10px 0 10px 10px;
-		background-color: #fff;
-		white-space: nowrap;
-		border-right: 10px solid transparent;
-		border-radius: $border-radius;
-	}
-
-	a:link,
-	a:visited {
-    background-color: $light-grey;
-    color: black;
+  .projects-group {
+    margin: 20px;
   }
 
-	a:hover,
-	a:active,
-	a:focus  {
-    background-color: $white;
-		color: black;
-	}
+  .projects-group__border {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+  }
+
+  .projects-list {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .projects-list li {
+    list-style-type: none;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: $border-radius;
+    animation-name: slidein;
+
+
+    @for $i from 1 to 100 {
+      &:nth-child(#{$i}) {
+        animation-duration: 0.1s * $i;
+      }
+    }
+
+    a {
+      width: 200px;
+      overflow-x: hidden;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0 10px 10px;
+      background-color: #fff;
+      white-space: nowrap;
+      border-right: 10px solid transparent;
+      border-radius: $border-radius;
+    }
+
+    a:link,
+    a:visited {
+      background-color: $light-grey;
+      color: black;
+    }
+
+    a:hover,
+    a:active,
+    a:focus  {
+      background-color: $white;
+      color: black;
+    }
+  }
 }
+
 
 @media screen and (max-width: 1023px) {
 	.projects {
@@ -58,56 +71,54 @@
 			text-align: center;
 		}
 
-		> p {
-		}
+    .projects-list {
+      display: block;
+      padding: 0;
+    }
+
+    .projects-list li {
+      list-style-type: none;
+      margin: 10px;
+      display: block;
+      vertical-align: middle;
+      border: 1px solid black;
+      border-radius: $border-radius;
+      animation-name: slidein;
+
+
+      @for $i from 1 to 100 {
+        &:nth-child(#{$i}) {
+          animation-duration: 0.1s * $i;
+        }
+      }
+
+      a {
+        width: auto;
+        overflow-x: hidden;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0 10px 10px;
+        background-color: #fff;
+        white-space: nowrap;
+        border-right: 10px solid transparent;
+        border-radius: $border-radius;
+        text-align: center;
+      }
+
+      a:link,
+      a:visited {
+        background-color: $light-grey;
+        color: black;
+      }
+
+      a:hover,
+      a:active,
+      a:focus  {
+        background-color: $white;
+        color: black;
+      }
+    }
 	}
 
-	.projects-list {
-		display: block;
-		padding: 0;
-	}
-
-	.projects-list li {
-		list-style-type: none;
-		margin: 10px;
-		display: block;
-		vertical-align: middle;
-		border: 1px solid black;
-		border-radius: $border-radius;
-		animation-name: slidein;
-
-
-		@for $i from 1 to 100 {
-			&:nth-child(#{$i}) {
-				animation-duration: 0.1s * $i;
-			}
-		}
-
-		a {
-			width: auto;
-			overflow-x: hidden;
-			text-decoration: none;
-			display: block;
-			padding: 10px 0 10px 10px;
-			background-color: #fff;
-			white-space: nowrap;
-			border-right: 10px solid transparent;
-			border-radius: $border-radius;
-			text-align: center;
-		}
-
-		a:link,
-		a:visited {
-	    background-color: $light-grey;
-	    color: black;
-	  }
-
-		a:hover,
-		a:active,
-		a:focus  {
-	    background-color: $white;
-			color: black;
-		}
-	}
 
 }
