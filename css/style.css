@@ -22,7 +22,7 @@ body {
 .sections {
   margin: 0; }
   .sections section {
-    padding: 0 10px;
+    padding: 10px;
     font-size: 20px; }
     .sections section h1 {
       display: inline-block;
