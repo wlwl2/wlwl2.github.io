@@ -11,7 +11,7 @@ module.exports = function (grunt) {
           dest: './css',
           ext: '.css'
         }]
-    }
+      }
     },
     watch: {
       sass: {
@@ -23,9 +23,9 @@ module.exports = function (grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src : [
-              'css/style.css',
-              '*.html'
+          src: [
+            'css/style.css',
+            '*.html'
           ]
         },
         options: {
