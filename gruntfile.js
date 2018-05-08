@@ -1,5 +1,4 @@
 module.exports = function (grunt) {
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
@@ -19,28 +18,13 @@ module.exports = function (grunt) {
         files: ['sass/*.scss'],
         tasks: ['sass']
       }
-    },
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src: [
-            'css/style.css',
-            '*.html'
-          ]
-        },
-        options: {
-          watchTask: true,
-          server: './'
-        }
-      }
     }
   })
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-sass')
-  grunt.loadNpmTasks('grunt-browser-sync')
 
   // Default task(s).
-  grunt.registerTask('default', ['browserSync', 'watch'])
+  grunt.registerTask('default', ['watch'])
 }
