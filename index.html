@@ -7,19 +7,16 @@
     <link rel="icon" type="image/ico" href="favicon.ico">
     <title>My Github Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-77898144-1', 'auto');
-      ga('send', 'pageview');
-    </script>
   </head>
   <body>
 
     <div class="menu-container">
       <div class="home-button">
+        <a class="home-button__link" href="https://wlwl2.com/">
+          <div class="home-button__link-container">
+            <span class="home-button__name">wlwl2</span>
+          </div>
+        </a>
         <a class="home-button__link" href="https://github.com/wlwl2">
           <div class="home-button__link-container">
             <img src="images/black-github-mark.svg" />
@@ -29,66 +26,44 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a class="menu-button" data-section-id="about-me">About Me</a></li>
+          <li><a class="menu-button" data-section-id="about">About</a></li>
           <li><a class="menu-button" data-section-id="repositories">Repositories</a></li>
-          <li><a class="menu-button" data-section-id="projects">Projects</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="sections">
-      <section class="about" data-section-id="about-me" data-section-hidden="yes">
-        <h1>About Me</h1>
+      <section class="about" data-section-id="about" data-section-hidden="no">
+        <h1>About</h1>
         <p>
           Hi, my name is William. I develop websites, games, and other
           applications.
         </p>
         <p>
-          Here is my <a href="https://github.com/wlwl2">github link</a>.
+          This is my old website. You can view my work and my new
+          website at <a href="https://wlwl2.com/">this link.</a>
         </p>
+        <p>
+          The list of all my repositories on one page is still here
+          though, you can still view that.
+        </p>
+
       </section>
 
       <section class="repositories" data-section-id="repositories" data-section-hidden="yes">
-        <h1>My Repositories</h1>
+        <h1>My Github Repositories</h1>
         <div class="repository-search">
           <input class="repository-search__input" type="text" name="" value="" placeholder="Search for a repository...">
         </div>
         <ul class="repository-list"></ul>
-      </section>
-
-      <section class="projects" data-section-id="projects" data-section-hidden="no">
-        <div class="projects-group">
-          <div class="projects-group__border">
-            <h1>Projects and Notes</h1>
-            <ul class="projects-list">
-              <li><a href="https://wlwl2.github.io/data-visualizations/">Data Visualizations</a></li>
-              <li><a href="http://wlwl2.github.io/color/">Color</a></li>
-              <li><a href="https://wlwl2.github.io/lyrics-translations/">Lyrics Translations</a></li>
-              <li><a href="https://wlwl2.github.io/browser-rpg/">Browser RPG</a></li>
-              <li><a href="https://wlwl2.github.io/isometric-rpg/">Isometric RPG</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="projects-group">
-          <div class="projects-group__border">
-            <h1>Atom Packages</h1>
-            <ul class="projects-list">
-              <li><a href="https://atom.io/packages/open-file">Open File</a></li>
-              <li><a href="https://atom.io/packages/keymap-display">Keymap Display</a></li>
-              <li><a href="https://atom.io/packages/view-in-browser">View in Browser</a></li>
-              <li><a href="https://atom.io/packages/window-focus">Window Focus</a></li>
-            </ul>
-          </div>
-        </div>
       </section>
     </div>
 
     <div class="mobile-menu">
       <nav class="mobile-menu__container">
         <ul class="hidden">
-          <li><a class="mobile-menu__link" data-section-id="about-me">About Me</a></li>
+          <li><a class="mobile-menu__link" data-section-id="about">About</a></li>
           <li><a class="mobile-menu__link" data-section-id="repositories">Repositories</a></li>
-          <li><a class="mobile-menu__link" data-section-id="projects">Projects</a></li>
         </ul>
       </nav>
       <div class="mobile-menu__open-menu">
