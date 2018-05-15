@@ -61,9 +61,9 @@
 
 // Opens and Closes the mobile menu ONLY!
 (function mobileMenu () {
-  let mobileMenuToggle = document.querySelector('.mobile-menu__open-menu')
-  let mobileMenuToggleText = document.querySelector('.mobile-menu__open-menu-text span')
-  let mobileMenu = document.querySelector('.mobile-menu ul')
+  var mobileMenuToggle = document.querySelector('.mobile-menu__open-menu')
+  var mobileMenuToggleText = document.querySelector('.mobile-menu__open-menu-text span')
+  var mobileMenu = document.querySelector('.mobile-menu ul')
 
   mobileMenuToggle.addEventListener('click', function (event) {
     if (mobileMenu.className === '') {
@@ -106,10 +106,10 @@
 
 // Repository Search
 (function repositorySearch () {
-  let searchInput = document.querySelector('.repository-search__input')
-  let repositoryList = document.querySelector('.repository-list')
+  var searchInput = document.querySelector('.repository-search__input')
+  var repositoryList = document.querySelector('.repository-list')
   searchInput.addEventListener('input', function (event) {
-    let listItem = repositoryList.children
+    var listItem = repositoryList.children
     for (var i = 0; i < listItem.length; i++) {
       listItem[i].className = 'hidden'
     }
